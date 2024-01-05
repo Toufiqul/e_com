@@ -21,6 +21,30 @@ const Home = () => {
             setFinalAmount(finalAmount-itemPrice)
         }
     }
+    const checkout = ()=> {
+        fetch('api here',{
+            method:'post',
+            headers:{
+                'content type':'app/json'
+            },
+            mode:'',
+            body:JSON.stringify({
+                items:[
+                    {id:1,quantity:quantity,price: itemPrice, name: itemName}
+                ]
+            })
+        })
+        .then(res=>{
+            if(res.ok)return res.json()
+            return res.json().then(json=>Promise.reject(json))
+        })
+        .then(({url})=>{
+            window.location=url
+        })
+        .catch(e=>{
+            console.log(e.error)
+        })
+    }
 
   return (    <div className='w-full mx-auto'>
   <div className='text-center font-raleway w-full max-w-5xl mx-auto my-6'>
@@ -54,7 +78,7 @@ const Home = () => {
          <div className='my-6 text-xl'>Amount to be paid:
          <span className='text-green-500 text-3xl font-bold pl-3'></span>{finalAmount}</div>
          <div className='my-6'>
-          <button  className='bg-green-400 text-white px-8 py-4 rounded-md text-2xl 
+          <button onClick={checkout} className='bg-green-400 text-white px-8 py-4 rounded-md text-2xl 
           font-semibold'>
             Checkout
           </button>
