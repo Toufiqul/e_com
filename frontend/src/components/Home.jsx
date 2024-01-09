@@ -23,9 +23,9 @@ const Home = () => {
     }
     const checkout = ()=> {
         fetch('http://localhost:5000/create-checkout-session',{
-            method:'post',
+            method:'POST',
             headers:{
-                'content type':'app/json'
+                'Content-Type':'application/json'
             },
             mode:'',
             body:JSON.stringify({

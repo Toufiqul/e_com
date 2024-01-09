@@ -1,12 +1,12 @@
 require("dotenv").config()
 
-const express = require("express");
-const app = express();
-const cors = require("cors");
-app.use(express.json());
+const express = require("express")
+const app = express()
+const cors = require("cors")
+app.use(express.json())
 app.use(
     cors({
-        origin:"http://localhost:5173/",
+        origin:"http://127.0.0.1:5173",
     })
 );
 
@@ -29,8 +29,8 @@ app.post("/create-checkout-session", async(req,res)=>{
                     quantity: item.quantity
                 }
             }),
-            success_url:'http://localhost:5173/success',
-            cancel_url:'http://localhost:5173/cancel'
+            success_url:'http://127.0.0.1:5173/success',
+            cancel_url:'http://127.0.0.1:5173/cancel'
         })
         res.json({url: session.url})
 
