@@ -22,7 +22,7 @@ const Home = () => {
         }
     }
     const checkout = ()=> {
-        fetch('api here',{
+        fetch('http://localhost:5000/create-checkout-session',{
             method:'post',
             headers:{
                 'content type':'app/json'
