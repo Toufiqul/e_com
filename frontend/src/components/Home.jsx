@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import pic from "../assets/chocolate.png";
+import pic from "../assets/C2.jpg";
 
 
 const Home = () => {
-    const itemName = "something";
+    const itemName = "Keychron C2";
     const itemPrice = 800;
     const [quantity,setQuantity] = useState(1);
     const [finalAmount, setFinalAmount] = useState(itemPrice);
@@ -46,12 +46,14 @@ const Home = () => {
         })
     }
 
-  return (    <div className='w-full mx-auto'>
+  return (    
+  <div className='w-full mx-auto'>
   <div className='text-center font-raleway w-full max-w-5xl mx-auto my-6'>
-    <div className='font-extrabold text-transparent text-6xl my-10 bg-clip-text
-    bg-gradient-to-r from-yellow-400 to-yellow-800'>
-        Chocolate Corner
+  <div class="font-extrabold text-6xl my-10 bg-clip-text
+    bg-gradient-to-r from-red-900 to-black-800 text-transparent">
+    K store
     </div>
+
     <div className='flex flex-col lg:flex-row justify-center items-center
     mx-auto w-full my-16 border-2 bg-[#fcf6f6] border-slate-100 shadow-md py-4'>
         <div className='flex lg:justify-end justify-center items-center mx-auto
@@ -63,7 +65,7 @@ const Home = () => {
          {itemName}
          </div>
          <div className='text-3xl font-semibold my-6 text-slate-600'>
-            price:&nbsp;&nbsp;{itemPrice}
+            price:&nbsp;&nbsp;৳ {itemPrice}
          </div>
 
          <small className='mt-10 mb-3 font-semibold'>Add Quantity</small>
@@ -76,7 +78,7 @@ const Home = () => {
              </div>
 
          <div className='my-6 text-xl'>Amount to be paid:
-         <span className='text-green-500 text-3xl font-bold pl-3'></span>{finalAmount}</div>
+         <span className='text-green-500 text-3xl font-bold pl-3'></span>৳ {finalAmount}</div>
          <div className='my-6'>
           <button onClick={checkout} className='bg-green-400 text-white px-8 py-4 rounded-md text-2xl 
           font-semibold'>
