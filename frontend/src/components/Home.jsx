@@ -27,7 +27,7 @@ const Home = () => {
             headers:{
                 'Content-Type':'application/json'
             },
-            mode:'',
+            mode:'cors',
             body:JSON.stringify({
                 items:[
                     {id:1,quantity:quantity,price: itemPrice, name: itemName}
@@ -42,7 +42,7 @@ const Home = () => {
             window.location=url
         })
         .catch(e=>{
-            console.log(e.error)
+            console.log(e)
         })
     }
 

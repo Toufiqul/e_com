@@ -6,21 +6,22 @@ const cors = require("cors")
 app.use(express.json())
 app.use(
     cors({
-        origin:"http://127.0.0.1:5173",
+        origin:"*",
     })
 );
 
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 
 app.post("/create-checkout-session", async(req,res)=>{
+    // console.log(req.body.items)
     try{
         const session = await stripe.checkout.sessions.create({
-            payment_method_type:["card"],
+            payment_method_types:["card"],
             mode:"payment",
             line_items: req.body.items.map(item => {
                 return{
                     price_data:{
-                        currency:"bdt",
+                        currency:"BDT",
                         product_data:{
                             name:item.name
                         },
