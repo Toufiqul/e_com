@@ -3,7 +3,7 @@
 ## Running Locally
 1. Clone the repository
     ```bash
-    git clone https://github.com/sadmann7/skateshop.git
+    git clone https://github.com/Toufiqul/k_store.git
     ```
 2. Frontend
     ```bash
