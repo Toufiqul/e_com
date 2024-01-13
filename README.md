@@ -1,14 +1,14 @@
 ## K Store
 
 to run the project:
->cd frontend \
->npm install \
->npm run dev 
+>\$ cd frontend \
+>\$ npm install \
+>\$ npm run dev 
 
->cd.. \
->cd backend \
->npm install \
->npm run dev 
+>\$ cd.. \
+>\$ cd backend \
+>\$ npm install \
+>\$ npm run dev 
 
 this is the homepage.
 ![home page](https://github.com/Toufiqul/k_store/blob/main/frontend/src/assets/home_page.png)
@@ -22,3 +22,6 @@ upon a successful payment you will be taken to the success page.
 
 failing that, the cancel page awaits
 ![cancel page](https://github.com/Toufiqul/k_store/blob/main/frontend/src/assets/cancel_page.png)
+
+I used tailwind css to design the website and react for the frontend.
+express and vite was also used in small extent.
