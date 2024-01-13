@@ -1,27 +1,45 @@
-## K Store
+# K Store
 
-to run the project:
->\$ cd frontend \
->\$ npm install \
->\$ npm run dev 
+## Running Locally
+1. Clone the repository
+    ```bash
+    git clone https://github.com/sadmann7/skateshop.git
+    ```
+2. Frontend
+    ```bash
+    cd frontend
+    npm install
+    npm run dev 
+    ```
+3. Backend
+    ```bash
+    cd ../backend
+    npm install
+    ```
+4. Copy the `.env.example` to `.env` and update the variables.
+     ```bash
+     cp .env.example .env
+     npm run dev 
+     ```
 
->\$ cd.. \
->\$ cd backend \
->\$ npm install \
->\$ npm run dev 
+## Description
 
-this is the homepage.
+### Homepage
 ![home page](https://github.com/Toufiqul/k_store/blob/main/frontend/src/assets/home_page.png)
 
-you can add a product to your cart by pressing the "Add" button and the current cart price will be updated accordingly. After that you can click checkout button and you will be taken to the stripe payment page.
+* You can add a product to your cart by pressing the "Add" button and the current cart price will be updated accordingly.
+* After that you can click checkout button and you will be taken to the stripe payment page.
 
 ![stripe payment page](https://github.com/Toufiqul/k_store/blob/main/frontend/src/assets/stripe_payment_page.png)
 
-upon a successful payment you will be taken to the success page.
+* Upon a successful payment you will be taken to the success page.
 ![success page](https://github.com/Toufiqul/k_store/blob/main/frontend/src/assets/success_page.png)
 
-failing that, the cancel page awaits
+* Failing that, the cancel page awaits
 ![cancel page](https://github.com/Toufiqul/k_store/blob/main/frontend/src/assets/cancel_page.png)
 
-I used tailwind css to design the website and react for the frontend.
-express and vite was also used in small extent.
+## Tech Stack
+* Tailwind CSS
+* React.js
+* Express.js
+* Vite
