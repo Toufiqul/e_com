@@ -1,2 +1,2 @@
-**K Stores
-![A test image](image.png)
+\*\*K Stores
+![A test image](image.jpg)
