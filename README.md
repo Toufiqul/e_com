@@ -1,18 +1,26 @@
 # K Store
 
-## To run the project:
-
-```bash
-cd frontend
-npm install
-npm run dev 
-```
-
-```bash
-cd ../backend
-npm install
-npm run dev 
-```
+## Running Locally
+1. Clone the repository
+    ```bash
+    git clone https://github.com/sadmann7/skateshop.git
+    ```
+2. Frontend
+    ```bash
+    cd frontend
+    npm install
+    npm run dev 
+    ```
+3. Backend
+    ```bash
+    cd ../backend
+    npm install
+    ```
+4. Copy the `.env.example` to `.env` and update the variables.
+     ```bash
+     cp .env.example .env
+     npm run dev 
+     ```
 
 ## Description
 
